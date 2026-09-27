@@ -153,43 +153,29 @@ Implémentez ensuite un test par scénario du plan de tests ci-dessus, nommé en
 
 **Question 5** :
 
-🤖 *À faire avec l'IA*
-
 Écrivez `testMoniteurTC3`, qui amène le moniteur à l'état 2 avant d'ajouter `stageValide`.
 
 **Question 6** :
-
-🤖 *À faire avec l'IA*
 
 Écrivez `testMoniteurTC4`, qui amène le moniteur à l'état 3 avant d'ajouter `stageValide`.
 
 **Question 7** :
 
-🤖 *À faire avec l'IA*
-
 Écrivez `testMoniteurTC5`, qui amène le moniteur à l'état 4 (en y incluant `stageValide`) avant de tenter de ré-ajouter `stageValide`.
 
 **Question 8** :
-
-🤖 *À faire avec l'IA*
 
 Écrivez `testMoniteurTC6`, qui amène le moniteur à l'état 4 avant d'ajouter un nouveau mock de `Stage` dont `getNumeroDeSemaine` renvoie une semaine déjà occupée.
 
 **Question 9** :
 
-🤖 *À faire avec l'IA*
-
 Écrivez `testMoniteurTC7`, qui amène le moniteur à l'état 4 avant d'ajouter un mock de `Stage` dont `getMoniteur` renvoie un autre moniteur (mocké ou non).
 
 **Question 10** :
 
-🤖 *À faire avec l'IA*
-
 Écrivez `testMoniteurTC8`, qui amène le moniteur à l'état 4 avant d'ajouter un mock de `Stage` dont `getMoniteur` renvoie déjà ce `moniteur` (semaine libre).
 
 **Question 11** :
-
-🤖 *À faire avec l'IA*
 
 Écrivez `testMoniteurTC9`, qui, sans aucun stage préalable, ajoute un mock de `Stage` dont le sport (un autre mock) renvoie `false` à `contientMoniteur`.
 

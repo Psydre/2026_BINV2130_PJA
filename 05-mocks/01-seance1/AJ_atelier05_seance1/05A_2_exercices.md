@@ -169,48 +169,30 @@ Pour chaque scénario suivant, nommez la méthode de test d'après son cas (`tes
 Les scénarios restants (TC5 à TC13 : suppressions puis cas de refus) suivent tous le même moule que TC1 à TC4 : c'est répétitif, un bon usage de l'IA. Aidez-vous d'un assistant IA (Claude Code, Copilot, …) pour générer ces tests à partir du plan de tests, mais relisez et exécutez chaque test généré, et vérifiez qu'il passe bien au rouge si vous cassez volontairement le code testé.
 
 **Question 9** :
-
-🤖 *À faire avec l'IA*
 Écrivez le scénario TC5 (suppression depuis l'état 4).
 
 **Question 10** :
-
-🤖 *À faire avec l'IA*
 Écrivez le scénario TC6 (suppression depuis l'état 3).
 
 **Question 11** :
-
-🤖 *À faire avec l'IA*
 Écrivez le scénario TC7 (suppression depuis l'état 2).
 
 **Question 12** :
-
-🤖 *À faire avec l'IA*
 Écrivez le scénario TC8 (suppression depuis l'état 1).
 
 **Question 13** :
-
-🤖 *À faire avec l'IA*
 Écrivez le scénario TC9 (ré-ajout d'un stage déjà présent : refusé).
 
 **Question 14** :
-
-🤖 *À faire avec l'IA*
 Écrivez le scénario TC10 (ajout refusé : semaine déjà occupée).
 
 **Question 15** :
-
-🤖 *À faire avec l'IA*
 Écrivez le scénario TC11 (suppression refusée : stage absent).
 
 **Question 16** :
-
-🤖 *À faire avec l'IA*
 Écrivez le scénario TC12 (ajout refusé : stage appartenant à un autre moniteur).
 
 **Question 17** :
-
-🤖 *À faire avec l'IA*
 Écrivez le scénario TC13 (ajout refusé : sport hors compétence).
 
 ---

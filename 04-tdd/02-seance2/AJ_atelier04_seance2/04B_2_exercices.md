@@ -55,13 +55,9 @@ Si vous souhaitez exécuter tous les tests se trouvant dans les différentes cla
 
 **Question 3** :
 
-🤖 *À faire avec l'IA*
-
 Il est temps de s'occuper de l'opération permettant de retrouver une tâche au sein de la `TodoList` (`findTask`). Veuillez faire du TDD pour les nouveaux scénarios au sein de la classe `TodoListTest`.
 
 **Question 4** :
-
-🤖 *À faire avec l'IA*
 
 Il devrait aussi être possible de modifier une tâche par le biais de la `TodoList` (`updateTask`), en indiquant tant la tâche que l'on souhaite mettre à jour que les nouvelles données de cette tâche. Veuillez faire du TDD pour ces scénarios au sein de la classe `TodoListTest`.
 
@@ -69,13 +65,9 @@ Il devrait aussi être possible de modifier une tâche par le biais de la `TodoL
 
 **Question 5** :
 
-🤖 *À faire avec l'IA*
-
 Reprenez les scénarios `countTasksEmpty`, `countTasksAfterAdd` et `countTasksAfterRemove` de la séance 1 et adaptez-les pour qu'ils utilisent des `Task` plutôt que de simples `String`.
 
 **Question 6** :
-
-🤖 *À faire avec l'IA*
 
 Faites de même pour `clearTasks` : adaptez `clearTasks` et `clearEmptyTasks` aux objets `Task`.
 

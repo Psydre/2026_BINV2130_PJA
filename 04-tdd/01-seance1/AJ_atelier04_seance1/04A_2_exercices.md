@@ -55,8 +55,6 @@ Assurez-vous d'abord d'avoir lu l'intégralité de la théorie ([`04A_1_theorie.
 
 **Question 3** *(UC « Terminer une tâche » — deviendra l'UC5 après l'évolution de la question 5)* :
 
-🤖 *À faire avec l'IA*
-
 Nous voulons pouvoir marquer une tâche comme terminée (`completeTask`) et vérifier si une tâche est terminée (`isCompleted`). Une tâche terminée ne peut plus être renommée. Cette fois, avant d'écrire le moindre code, identifiez vous-même les scénarios de tests (cas positifs, cas négatifs, cas limites — appuyez-vous sur les vidéos), puis faites du TDD pour chacun d'eux.
 
 Pensez notamment à ce qui doit se passer quand on tente de terminer une tâche inexistante, de terminer une tâche déjà terminée, ou de renommer une tâche terminée.
@@ -65,8 +63,6 @@ Pensez notamment à ce qui doit se passer quand on tente de terminer une tâche 
 
 **Question 4** *(pas une UC — technique de test appliquée aux UC déjà identifiées)* :
 
-🤖 *À faire avec l'IA*
-
 Pour l'argument `newTask` de `renameTask` (question 2), partitionnez les valeurs possibles en classes d'équivalence (par exemple : nom vide/blanc, nom valide et déjà présent dans la liste, nom valide et absent de la liste). Pour chaque classe, indiquez quel scénario de test de la question 2 la couvre déjà.
 
 Faites de même pour l'argument `existingTask` de `removeTask` (question 1) : identifiez les classes d'équivalence de son domaine de valeurs, puis vérifiez qu'un scénario de test existe déjà pour chacune. S'il en manque un, ajoutez-le en TDD.
@@ -74,8 +70,6 @@ Faites de même pour l'argument `existingTask` de `removeTask` (question 1) : id
 ### Spécifier les tests
 
 **Question 5** :
-
-🤖 *À faire avec l'IA*
 
 Dans cet exercice, vous n'allez pas écrire de code : vous allez uniquement compléter une spécification, sous la forme d'une liste de scénarios de tests regroupés par UC (cas d'utilisation).
 
@@ -112,8 +106,6 @@ Complétez cette liste : corrigez UC1 à UC3 si besoin, ajoutez l'UC « terminer
 
 **Question 6** *(UC10)* :
 
-🤖 *À faire avec l'IA*
-
 Implémentez `countTasks`, qui renvoie le nombre de tâches de la `TodoList`. Faites du TDD pour ces scénarios :
 
 1. `countTasksEmpty` : sur une liste vide, `countTasks` renvoie `0`.
@@ -123,8 +115,6 @@ Implémentez `countTasks`, qui renvoie le nombre de tâches de la `TodoList`. Fa
 ### Vider la liste
 
 **Question 7** *(UC11)* :
-
-🤖 *À faire avec l'IA*
 
 Implémentez `clearTasks`, qui vide la `TodoList`. Faites du TDD pour ces scénarios :
 
