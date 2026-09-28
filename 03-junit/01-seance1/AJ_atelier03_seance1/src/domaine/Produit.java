@@ -25,7 +25,13 @@ public class Produit  {
     private final String rayon;
     private final String marque;
 
-    private SortedMap<LocalDate, Prix> historiquePrix = new TreeMap<LocalDate, Prix>(Comparator.reverseOrder());
+    //Les dates sont triées de la plus récente à la plus ancienne : l'inverse de l'ordre naturel de LocalDate
+    private SortedMap<LocalDate, Prix> historiquePrix = new TreeMap<LocalDate, Prix>(new Comparator<LocalDate>() {
+        @Override
+        public int compare(LocalDate d1, LocalDate d2) {
+            return d2.compareTo(d1);
+        }
+    });
 
     /**
      * Crée un produit sans aucun prix dans son historique.

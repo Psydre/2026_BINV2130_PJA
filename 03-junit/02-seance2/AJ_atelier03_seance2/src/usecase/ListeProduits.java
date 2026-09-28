@@ -32,10 +32,22 @@ import static util.Util.checkStrictlyPositive;
 public class ListeProduits {
 
 
-    //La classe produit n'implémentant pas Comparable, il faut passer un Comparator lors de la création du TreeSet
-    private SortedSet<Produit> produits = new TreeSet<>(Comparator.comparing(Produit::getNom)
-                                                        .thenComparing(Produit::getMarque)
-                                                        .thenComparing(Produit::getRayon));
+    //La classe Produit n'implémentant pas Comparable, il faut passer un Comparator lors de la création du TreeSet ;
+    //ici, via une classe anonyme
+    private SortedSet<Produit> produits = new TreeSet<>(new Comparator<Produit>() {
+        @Override
+        public int compare(Produit p1, Produit p2) {
+            int compare = p1.getNom().compareTo(p2.getNom());
+            if (compare != 0) {
+                return compare;
+            }
+            compare = p1.getMarque().compareTo(p2.getMarque());
+            if (compare != 0) {
+                return compare;
+            }
+            return p1.getRayon().compareTo(p2.getRayon());
+        }
+    });
 
     /**
      * Cette méthode renvoie vraie si le produit passé en paramètre est présent dans la liste
@@ -188,7 +200,16 @@ public class ListeProduits {
         }
 
         List<Produit> resultat = new ArrayList<>(prixParProduit.keySet());
-        resultat.sort(Comparator.<Produit>comparingDouble(prixParProduit::get).thenComparing(Produit::getNom));
+        resultat.sort(new Comparator<Produit>() {
+            @Override
+            public int compare(Produit p1, Produit p2) {
+                int compare = Double.compare(prixParProduit.get(p1), prixParProduit.get(p2));
+                if (compare != 0) {
+                    return compare;
+                }
+                return p1.getNom().compareTo(p2.getNom());
+            }
+        });
         return resultat;
     }
 
