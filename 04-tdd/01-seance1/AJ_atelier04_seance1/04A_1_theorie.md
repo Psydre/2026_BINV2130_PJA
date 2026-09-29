@@ -13,24 +13,22 @@
 
 ## Introduction au Test Driven Development
 
-Ce document reprend les notions utiles avant le chapitre « Un exemple ».
-
 Le TDD est un processus de développement de logiciel où les tests sont utilisés comme une spécification pour concevoir et écrire le code.
 
 Les 3 étapes du TDD :
 
 1. **Écrire un test qui échoue** : on écrit un test qui décrit ce que notre code devra faire.
 2. **Écrire le code pour faire passer ce test** : on écrit le code le plus simple permettant le succès du test.
-3. **Refactor du code** : on va considérer une mise à jour du code selon les bonnes pratiques de l'OO. S'il y a des aspects qui peuvent être améliorés, on va faire un refactor du code pour qu'il soit plus facilement maintenable, en éliminant les duplications, en diminuant les dépendances, en renommant des méthodes, variables, en augmentant l'efficacité… tout cela sans changer le comportement du code : le test doit toujours réussir.
+3. **Refactorer le code** : on va considérer une mise à jour du code selon les bonnes pratiques de l'OO. S'il y a des aspects qui peuvent être améliorés, on va refactorer le code pour qu'il soit plus facilement maintenable, en éliminant les duplications, en diminuant les dépendances, en renommant des méthodes, variables, en augmentant l'efficacité… tout cela sans changer le comportement du code : le test doit toujours réussir.
 
 Ce cycle est communément appelé **red-green-refactor** : *red* pour le test qui échoue (étape 1), *green* pour le test qui réussit une fois le code écrit (étape 2), *refactor* pour l'amélioration du code (étape 3).
 
 Voici certains des avantages du TDD :
 
 1. Le programmeur reçoit un rapide feedback sur ce qu'il produit :
-  1. Tout changement de code peut se faire en toute confiance car si tous les tests passent, c'est que les modifications n'ont rien changé !
-  2. Cela diminue donc la peur de changer son code et encourage à l'améliorer.
-2. Le programmeur doit se mettre dans la peau de l'utilisateur lors de l'écriture du test permettant de produire du code répondant mieux aux besoins.
+   1. Tout changement de code peut se faire en confiance : si tous les tests passent, c'est que les modifications n'ont cassé aucun des comportements couverts par les tests.
+   2. Cela diminue donc la peur de changer son code et encourage à l'améliorer.
+2. Le programmeur doit se mettre dans la peau de l'utilisateur lors de l'écriture du test, ce qui permet de produire du code répondant mieux aux besoins.
 3. Le programmeur doit se focaliser sur l'écriture de classes concrètes, sans en faire trop, en évitant ainsi des généralisations et optimisations du code prématurées.
 
 ## Spécifier les tests
@@ -59,15 +57,15 @@ Nous souhaitons développer une mini application qui permette de gérer une list
 Nous allons donc identifier tous les cas d'utilisation et le comportement attendu :
 
 1. **(UC1) Ajouter une tâche à la liste :**
-  1. `addTask` : la tâche est contenue dans la liste, on informe du succès de l'opération
-  2. `addEmptyTask` : on tente d'ajouter une tâche vide (constituée uniquement de caractères « blancs » ou nulle), la tâche n'est pas contenue dans la liste, on informe de l'échec de l'opération
-  3. `addExistingTask` : on tente d'ajouter une tâche déjà présente, on informe de l'échec de l'opération
+   1. `addTask` : la tâche est contenue dans la liste, on informe du succès de l'opération
+   2. `addEmptyTask` : on tente d'ajouter une tâche vide (constituée uniquement de caractères « blancs » ou nulle), la tâche n'est pas contenue dans la liste, on informe de l'échec de l'opération
+   3. `addExistingTask` : on tente d'ajouter une tâche déjà présente, on informe de l'échec de l'opération
 2. **(UC2) Vérifier qu'une tâche est contenue dans la liste :**
-  1. La tâche est présente et on l'indique (pas besoin d'identifier ce scénario de tests car c'est couvert par les scénarios associés à l'UC1)
-  2. La tâche n'est pas présente et on l'indique (pas besoin d'identifier ce scénario de tests car c'est couvert par les scénarios associés à l'UC1)
+   1. La tâche est présente et on l'indique (pas besoin d'identifier ce scénario de tests car c'est couvert par les scénarios associés à l'UC1)
+   2. La tâche n'est pas présente et on l'indique (pas besoin d'identifier ce scénario de tests car c'est couvert par les scénarios associés à l'UC1)
 3. **(UC3) Supprimer une tâche de la liste :**
-  1. `removeTask` : la tâche n'est plus contenue dans la liste, on informe du succès de l'opération
-  2. `removeUnexistingTask` : on tente de supprimer une tâche inexistante, on informe de l'échec de l'opération
+   1. `removeTask` : la tâche n'est plus contenue dans la liste, on informe du succès de l'opération
+   2. `removeUnexistingTask` : on tente de supprimer une tâche inexistante, on informe de l'échec de l'opération
 
 Cette liste permet d'identifier les scénarios de tests et peut vite devenir longue. Si vous souhaitez travailler de manière incrémentale et aller plus rapidement dans votre code, n'hésitez pas à créer votre spécification de tests de manière incrémentale :
 
@@ -87,7 +85,7 @@ L'idée est de commencer les tests avec l'UC et le scénario de test qui semble 
 
 On identifie d'abord ce que l'on veut vérifier, en écrivant les asserts attendus — pour une méthode et un objet qui souvent n'existent pas encore. Puis on utilise l'éditeur de code pour générer le contexte du test : les classes et objets nécessaires.
 
-Si vous voulez plus de détails sur les fonctionnalités offertes par IntelliJ pour faire du TDD, vous pouvez consulter la documentation : *Test-driven development*. Nous allons reprendre ces fonctionnalités dans le tutoriel qui suit.
+Si vous voulez plus de détails sur les fonctionnalités offertes par IntelliJ pour faire du TDD, vous pouvez consulter la documentation : [*Test-driven development*](https://www.jetbrains.com/help/idea/tdd-with-intellij-idea.html). Nous allons reprendre ces fonctionnalités dans le tutoriel qui suit.
 
 Sous IntelliJ, veuillez créer un projet nommé `AJ_atelier04_seance1`.
 
@@ -181,7 +179,12 @@ void addTask() {
 
 **Point-clé : écrire l'implémentation qui est évidente en évitant les étapes triviales de tests.**
 
-Il est inutile d'écrire du code trop trivial comme renvoyer une valeur hardcodée dans une fonction quand on sait pertinemment que cette valeur va changer au cours du temps. Dans ce cas, autant directement créer un attribut. Idem si on doit ajouter un élément à une liste, autant créer cette liste. Il est notamment inutile de tester les getters & setters. Et quand une implémentation n'est pas si évidente, alors n'écrivez que le code permettant de passer le test…
+« Le code minimum pour faire passer le test » ne veut pas dire « le code le plus bête possible ». Deux stratégies coexistent :
+
+- **Implémentation évidente** : quand vous savez comment écrire le code, écrivez-le directement. Il est inutile d'écrire du code trop trivial comme renvoyer une valeur hardcodée dans une fonction quand on sait pertinemment que cette valeur va changer au cours du temps. Dans ce cas, autant directement créer un attribut. Idem si on doit ajouter un élément à une liste, autant créer cette liste.
+- **Pas à pas** : quand une implémentation n'est pas si évidente, n'écrivez que le code permettant de passer le test en cours, et laissez les tests suivants vous guider vers la solution générale.
+
+À l'exception des getters & setters, on n'écrit pas de code qu'aucun test n'exige.
 
 Nous allons commencer par la méthode `addTask`. Voici l'implémentation évidente pour ajouter une tâche :
 
@@ -243,6 +246,8 @@ void addEmptyTask() {
   assertAll(
       () -> assertFalse(todoList.addTask("")),
       () -> assertFalse(todoList.containsTask("")),
+      () -> assertFalse(todoList.addTask("   ")),
+      () -> assertFalse(todoList.containsTask("   ")),
       () -> assertFalse(todoList.addTask(null)),
       () -> assertFalse(todoList.containsTask(null))
   );
@@ -267,7 +272,7 @@ public boolean addTask(String task) {
 
 Ce test passe ! Vérifiez que tous les tests continuent à passer !
 
-3. Refactor :
+3. Refactorer :
 
 Ici, on sent au niveau des scénarios de tests qu'il y a un pattern qui revient régulièrement : on aura quasi toujours besoin d'une TodoList vide pour commencer un scénario de test. Nous allons donc créer un attribut, et le réinitialiser avant chaque test au sein de la méthode `setUp` de la classe de test :
 
@@ -298,10 +303,12 @@ public class TodoListTest {
   @Test
   void addEmptyTask() {
     assertAll(
-            () -> assertFalse(todoList.addTask("")),
-            () -> assertFalse(todoList.containsTask("")),
-            () -> assertFalse(todoList.addTask(null)),
-            () -> assertFalse(todoList.containsTask(null))
+        () -> assertFalse(todoList.addTask("")),
+        () -> assertFalse(todoList.containsTask("")),
+        () -> assertFalse(todoList.addTask("   ")),
+        () -> assertFalse(todoList.containsTask("   ")),
+        () -> assertFalse(todoList.addTask(null)),
+        () -> assertFalse(todoList.containsTask(null))
     );
   }
 
@@ -351,9 +358,9 @@ NB : l'état du projet à la fin de ce tutoriel vous est fourni dans `AJ_atelier
 
 1. Commencez par identifier les cas d'utilisation de votre application et identifier les scénarios de tests associés.
 2. Pour chaque scénario de test :
-  1. **Écrire un test qui échoue** — démarrez à partir des assertions et visualisez que le test échoue pour de bonnes raisons !
-  2. **Écrire le code minimum pour faire passer le test** — écrivez une implémentation évidente tout en évitant le code trivial.
-  3. **Refactor du code** — appliquez la règle de trois : dès qu'il y a 3 duplications dans votre code, remplacez celui-ci par du code réutilisable ; sinon, laissez votre code en l'état. Assurez-vous que tous les tests continuent à passer après le refactor.
+   1. **Écrire un test qui échoue** — démarrez à partir des assertions et visualisez que le test échoue pour de bonnes raisons !
+   2. **Écrire le code minimum pour faire passer le test** — écrivez une implémentation évidente tout en évitant le code trivial.
+   3. **Refactor du code** — appliquez la règle de trois : dès qu'il y a 3 duplications dans votre code, remplacez celui-ci par du code réutilisable ; sinon, laissez votre code en l'état. Assurez-vous que tous les tests continuent à passer après le refactor.
 
 ## TDD assisté par IA
 

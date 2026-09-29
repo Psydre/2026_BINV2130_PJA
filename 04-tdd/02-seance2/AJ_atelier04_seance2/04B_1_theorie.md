@@ -8,7 +8,9 @@
 
 ## Les tests comme filet de sécurité
 
-Le premier bénéfice du TDD ne se voit vraiment qu'au moment où le code doit **évoluer**. Quand une application est couverte par des tests écrits avant le code, chaque modification ultérieure peut être faite sereinement : si un changement casse un comportement existant, un test échoue immédiatement et pointe précisément ce qui est cassé. Les tests jouent le rôle de filet de sécurité (*safety net*).
+Un bénéfice majeur du TDD ne se voit vraiment qu'au moment où le code doit **évoluer**. Quand une application est couverte par des tests écrits avant le code, chaque modification ultérieure peut être faite sereinement : si un changement casse un comportement couvert par les tests, un test échoue immédiatement et indique quel scénario est cassé. Les tests jouent le rôle de filet de sécurité (*safety net*).
+
+Ce filet ne protège que ce qu'il couvre : un comportement sans scénario de test peut toujours régresser en silence. C'est pourquoi la qualité de la spécification des tests (séance 1) compte autant.
 
 Sans ce filet, chaque évolution demande de re-vérifier manuellement tous les comportements existants — ce que personne ne fait réellement, et c'est ainsi que naissent les régressions.
 
@@ -16,9 +18,11 @@ Sans ce filet, chaque évolution demande de re-vérifier manuellement tous les c
 
 Quand une exigence change (par exemple : une tâche n'est plus une simple `String` mais un objet avec un titre et une description), le cycle TDD s'applique de la même manière, mais il démarre des **tests existants** plutôt que d'une page blanche :
 
-1. **Mettre à jour les tests d'abord.** Adaptez les scénarios de tests existants à la nouvelle exigence. Le code ne compile plus ou les tests échouent : c'est la phase *red*, et elle échoue pour de bonnes raisons.
-2. **Mettre à jour le code minimum** pour faire passer tous les tests — les anciens adaptés comme les éventuels nouveaux. C'est la phase *green* : quand tout passe, vous avez la garantie que la nouvelle exigence est couverte **et** que rien d'existant n'est cassé.
+1. **Mettre à jour les tests d'abord.** Adaptez les scénarios de tests existants à la nouvelle exigence. En général, le code de test ne compile plus (la classe `Task` ou les nouvelles signatures n'existent pas encore). Créez d'abord les classes et signatures manquantes avec une implémentation minimale, puis exécutez les tests et vérifiez qu'ils échouent. C'est la phase *red*.
+2. **Mettre à jour le code minimum** pour faire passer tous les tests — les anciens adaptés comme les éventuels nouveaux. C'est la phase *green* : quand tout passe, la nouvelle exigence est couverte **et** aucun comportement couvert par les tests n'est cassé.
 3. **Refactorer** si nécessaire, toujours sous la protection des tests.
+
+Attention : tant que la classe de test ne compile pas, **aucun** de ses tests ne s'exécute — le filet de sécurité est momentanément absent. Adaptez donc les scénarios un par un (ou par petits groupes) et revenez à un état qui compile le plus vite possible, plutôt que de réécrire toute la classe de test d'un coup.
 
 Le jeu consiste donc à faire passer tous les anciens tests avec le nouveau code. Si un ancien scénario n'a plus de sens avec la nouvelle exigence, c'est la spécification qui a changé : mettez à jour le scénario en conséquence, ne le supprimez pas silencieusement.
 

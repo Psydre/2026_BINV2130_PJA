@@ -31,6 +31,8 @@ public class TodoListTest {
             assertAll(
                     () -> assertFalse(todoList.addTask("")),
                     () -> assertFalse(todoList.containsTask("")),
+                    () -> assertFalse(todoList.addTask("   ")),
+                    () -> assertFalse(todoList.containsTask("   ")),
                     () -> assertFalse(todoList.addTask(null)),
                     () -> assertFalse(todoList.containsTask(null))
             );
