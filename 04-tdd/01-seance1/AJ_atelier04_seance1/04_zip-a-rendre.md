@@ -98,6 +98,9 @@ Le contenu des classes n'est pas coté ici : un `TodoList` incomplet ne vous fai
 sur cette remise. Vos réponses aux questions de la séance restent évaluées, elles, par la
 correction au tableau et par la fiche de solutions de la semaine.
 
+Comment ce barème est appliqué (vérification automatique, puis relecture à la main) :
+[`04_zip-correction.md`](../../04_zip-correction.md).
+
 ## Dépôt
 
 Déposez votre archive sur mooVin, activité *Remise zip — atelier 4*, **pour le lundi 05/10/2026

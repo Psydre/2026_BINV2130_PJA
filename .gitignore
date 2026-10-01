@@ -32,3 +32,6 @@ verification.md
 # (_youtube/descriptions.md) sont versionnées.
 _youtube/*.mp4
 _youtube/*.mov
+# Notes et suivis des étudiants (exports Moodle, tableurs) : données
+# personnelles, jamais versionnées ni synchronisées vers le dépôt public.
+/notes/
