@@ -3,7 +3,7 @@
 ## À rendre cette semaine
 
 - **Le QCM de la semaine sur mooVin** — ferme le lundi 05/10/2026 à 20h.
-- **L'archive zip du projet de cette séance** — à déposer sur mooVin pour le lundi 05/10/2026 à 20h. Consignes et barème : [`04_zip-a-rendre.md`](04_zip-a-rendre.md).
+- **L'archive zip du projet obtenu à la fin du tutoriel de cette théorie** (pas des exercices de la séance) — à déposer sur mooVin pour le lundi 05/10/2026 à 20h. Consignes et barème : [`04_zip-a-rendre.md`](04_zip-a-rendre.md).
 
 ## Vidéos
 

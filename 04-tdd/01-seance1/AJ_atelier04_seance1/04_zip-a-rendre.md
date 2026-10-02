@@ -16,8 +16,9 @@ vous avez déjà écrit — il n'y a rien de neuf à programmer.
 
 ## Ce qu'on vous demande
 
-Vous remettez le projet `AJ_atelier04_seance1` tel qu'il est à la fin de la séance 1, avec vos
-réponses aux questions de [`04A_2_exercices.md`](04A_2_exercices.md).
+Vous remettez le projet `AJ_atelier04_seance1` tel qu'il est à la fin du tutoriel de la théorie
+([`04A_1_theorie.md`](04A_1_theorie.md)), et non après les exercices de la séance : vous faites cette remise seul,
+pendant le créneau de théorie, sans attendre la séance.
 
 ### Structure exacte de l'archive
 
@@ -95,8 +96,8 @@ la décompresser — et cochez :
 | Le nom du fichier respecte le format demandé | 4 |
 
 Le contenu des classes n'est pas coté ici : un `TodoList` incomplet ne vous fait perdre aucun point
-sur cette remise. Vos réponses aux questions de la séance restent évaluées, elles, par la
-correction au tableau et par la fiche de solutions de la semaine.
+sur cette remise. Les exercices de la séance n'en font pas partie : ils se corrigent au tableau et
+avec la fiche de solutions de la semaine.
 
 Comment ce barème est appliqué (vérification automatique, puis relecture à la main) :
 [`04_zip-correction.md`](../../04_zip-correction.md).
@@ -107,7 +108,7 @@ Déposez votre archive sur mooVin, activité *Remise zip — atelier 4*, **pour 
 à 20h**, en même temps que la fermeture du QCM mooVin de la semaine.
 
 Une archive modèle, `AJ_atelier04_seance1_VANDERMEULEN-Jose.zip`, est publiée après l'échéance à la
-racine de la semaine, à côté de la fiche de solutions : ouvrez-la pour comparer sa structure à celle
+racine de la semaine, à côté de [`04_zip-correction.md`](../../04_zip-correction.md) : ouvrez-la pour comparer sa structure à celle
 de votre propre remise.
 
 ---
