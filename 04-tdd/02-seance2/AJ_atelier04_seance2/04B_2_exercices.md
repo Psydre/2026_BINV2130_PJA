@@ -25,7 +25,7 @@ En partie 1, vous avez constaté que gérer l'état d'une tâche à côté d'une
 
 ### Consignes
 
-Dans IntelliJ, créez un projet intitulé `AJ_atelier04_seance2`. Récupérez les classes fournies dans `AJ_atelier04_seance2/` : [`TodoList.java`](src/TodoList.java) dans un dossier `src` (package par défaut) et `TodoListTest.java` dans un dossier `test`, tous deux marqués respectivement Sources Root et Test Sources Root — c'est l'état de la solution de la séance 1 (voir aussi `../../01-seance1/AJ_atelier04_seance1_solution/`). Appuyez-vous sur votre spécification complétée de la séance 1 ; une solution de cette spécification est fournie dans `../../01-seance1/AJ_atelier04_seance1_solution/04A_solutions-scenarios-de-tests.md`.
+Dans IntelliJ, ouvrez le dossier `AJ_atelier04_seance2` (File → Open…). Il contient déjà [`TodoList.java`](src/TodoList.java) dans `src` (package par défaut) et `TodoListTest.java` dans `test` — c'est l'état de la solution de la séance 1 (voir aussi `../../01-seance1/AJ_atelier04_seance1_solution/`). Appuyez-vous sur votre spécification complétée de la séance 1 ; une solution de cette spécification est fournie dans `../../01-seance1/AJ_atelier04_seance1_solution/04A_solutions-scenarios-de-tests.md`. Comme en séance 1, vérifiez que `src` et `test` sont marqués respectivement Sources Root et Test Sources Root, et que JUnit 5 est ajouté au projet.
 
 ### TDD lors de la mise à jour de fonctionnalités existantes
 
@@ -47,10 +47,6 @@ Ajoutez un test qui vérifie que `removeTask` sur une tâche qui a été clonée
 
 Si vous souhaitez exécuter tous les tests se trouvant dans les différentes classes de tests situées dans le dossier `test` en une seule fois, vous pouvez le faire ainsi : clic droit sur `test`, Run 'All Tests'.
 
-### 🤖 À partir d'ici, faites du TDD avec l'IA
-
-À partir de la question 3, aidez-vous d'un assistant IA (Claude Code, Copilot, …) pour faire du TDD : respectez scrupuleusement le cycle red-green-refactor étape par étape — demandez d'abord le test seul, vérifiez qu'il échoue pour de bonnes raisons, puis demandez le code minimal, vérifiez qu'il passe, puis le refactor si besoin.
-
 ### TDD pour les nouvelles fonctionnalités de la classe `TodoList`
 
 **Question 3** :
@@ -60,6 +56,10 @@ Il est temps de s'occuper de l'opération permettant de retrouver une tâche au 
 **Question 4** :
 
 Il devrait aussi être possible de modifier une tâche par le biais de la `TodoList` (`updateTask`), en indiquant tant la tâche que l'on souhaite mettre à jour que les nouvelles données de cette tâche. Veuillez faire du TDD pour ces scénarios au sein de la classe `TodoListTest`.
+
+### 🤖 À partir d'ici, faites du TDD avec l'IA
+
+À partir de la question 5, aidez-vous d'un assistant IA (Claude Code, Copilot, …) pour faire du TDD : respectez scrupuleusement le cycle red-green-refactor étape par étape — demandez d'abord le test seul, vérifiez qu'il échoue pour de bonnes raisons, puis demandez le code minimal, vérifiez qu'il passe, puis le refactor si besoin.
 
 ### Compter et vider la liste
 

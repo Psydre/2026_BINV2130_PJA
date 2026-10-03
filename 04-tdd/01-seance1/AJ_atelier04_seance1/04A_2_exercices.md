@@ -25,7 +25,7 @@ Nous développons une application de gestion de tâches : une [`TodoList`](src/T
 
 ### Consignes
 
-Assurez-vous d'abord d'avoir lu l'intégralité de la théorie ([`04A_1_theorie.md`](04A_1_theorie.md)) et visionné les vidéos ci-dessus. Dans IntelliJ, créez un projet intitulé `AJ_atelier04_seance1`. Récupérez les classes fournies dans `AJ_atelier04_seance1/` : `TodoList.java` dans un dossier `src` (package par défaut) et `TodoListTest.java` dans un dossier `test`, tous deux marqués respectivement Sources Root et Test Sources Root — c'est l'état où le tutoriel de la théorie les laisse. Pour chaque question, respectez scrupuleusement le cycle TDD : le test d'abord, il doit échouer pour de bonnes raisons, puis le code minimum, puis le refactor éventuel.
+Assurez-vous d'abord d'avoir lu l'intégralité de la théorie ([`04A_1_theorie.md`](04A_1_theorie.md)) et visionné les vidéos ci-dessus. Dans IntelliJ, ouvrez le dossier `AJ_atelier04_seance1` (File → Open…). Il contient déjà `TodoList.java` dans `src` (package par défaut) et `TodoListTest.java` dans `test` — c'est l'état où le tutoriel de la théorie les laisse. Vérifiez que `src` et `test` sont marqués respectivement Sources Root et Test Sources Root, et que JUnit 5 est ajouté au projet. Pour chaque question, respectez scrupuleusement le cycle TDD : le test d'abord, il doit échouer pour de bonnes raisons, puis le code minimum, puis le refactor éventuel.
 
 Le projet tel que le tutoriel de la théorie le laisse fait l'objet d'une remise cotée, à déposer sur mooVin avant la séance sous la forme d'une archive zip, dont la structure est décrite dans [`04_zip-a-rendre.md`](04_zip-a-rendre.md). Les exercices ci-dessous n'en font pas partie.
 
@@ -47,10 +47,6 @@ Le projet tel que le tutoriel de la théorie le laisse fait l'objet d'une remise
 3. `renameTaskToExistingTask` — on tente de renommer une tâche vers un nom déjà présent dans la liste, la tâche d'origine reste inchangée, on informe de l'échec de l'opération
 4. `renameTaskToEmptyTask` — on tente de renommer une tâche vers un nom vide (constitué uniquement de caractères « blancs » ou nul), la tâche d'origine reste inchangée, on informe de l'échec de l'opération
 
-### 🤖 À partir d'ici, faites du TDD avec l'IA
-
-À partir de la question 3, aidez-vous d'un assistant IA (Claude Code, Copilot, …) pour faire du TDD : respectez scrupuleusement le cycle red-green-refactor étape par étape — demandez d'abord le test seul, vérifiez qu'il échoue pour de bonnes raisons, puis demandez le code minimal, vérifiez qu'il passe, puis le refactor si besoin.
-
 ### Terminer une tâche
 
 **Question 3** *(UC « Terminer une tâche » — deviendra l'UC5 après l'évolution de la question 5)* :
@@ -58,6 +54,8 @@ Le projet tel que le tutoriel de la théorie le laisse fait l'objet d'une remise
 Nous voulons pouvoir marquer une tâche comme terminée (`completeTask`) et vérifier si une tâche est terminée (`isCompleted`). Une tâche terminée ne peut plus être renommée. Cette fois, avant d'écrire le moindre code, identifiez vous-même les scénarios de tests (cas positifs, cas négatifs, cas limites — appuyez-vous sur les vidéos), puis faites du TDD pour chacun d'eux.
 
 Pensez notamment à ce qui doit se passer quand on tente de terminer une tâche inexistante, de terminer une tâche déjà terminée, ou de renommer une tâche terminée.
+
+Une fois vos scénarios écrits et vos tests au vert, demandez à un assistant IA quels scénarios de tests il proposerait pour `completeTask` et `isCompleted`. Comparez avec les vôtres : en a-t-il trouvé un que vous aviez oublié ? En propose-t-il un inutile, ou dont le comportement attendu est faux ?
 
 ### Classes d'équivalence
 
@@ -71,9 +69,9 @@ Faites de même pour l'argument `existingTask` de `removeTask` (question 1) : id
 
 **Question 5** :
 
-Dans cet exercice, vous n'allez pas écrire de code : vous allez uniquement compléter une spécification, sous la forme d'une liste de scénarios de tests regroupés par UC (cas d'utilisation).
+Dans cet exercice et le suivant, vous n'écrivez pas de code : vous complétez une spécification, sous la forme d'une liste de scénarios de tests regroupés par UC (cas d'utilisation).
 
-Nous souhaitons faire évoluer l'application de gestion de tâches. Pour chaque point, la correspondance avec les UC déjà identifiées (ci-dessous, ou aux questions 2 et 3) est indiquée entre parenthèses. Il doit être possible :
+Nous souhaitons faire évoluer l'application de gestion de tâches. Il doit être possible :
 
 1. De créer des tâches en donnant ces informations : un titre (ne peut pas être vide ou null), une description (ne peut pas être nulle). *(UC nouvelle)*
 2. D'ajouter une tâche qui a un même titre au sein d'une TodoList. Cela revient à ajouter une tâche déjà présente, on informe de l'échec de l'opération. *(fait évoluer l'UC1 « Ajouter une tâche à la liste » ci-dessous)*
@@ -83,11 +81,7 @@ Nous souhaitons faire évoluer l'application de gestion de tâches. Pour chaque 
 6. De renvoyer une tâche qui se trouve au sein de la TodoList en donnant une tâche qui contiendrait son titre et sa description. *(UC nouvelle)*
 7. De modifier une TodoList en indiquant une tâche à modifier et une nouvelle tâche incluant les nouvelles données. *(UC nouvelle)*
 
-Pour chaque UC qui évolue (points 2, 3 et 4) : reprenez ses scénarios de tests existants et mettez-les à jour un par un — un scénario peut rester inchangé, être renommé, voir son comportement attendu modifié, ou devenir obsolète (à supprimer) si la vérification qu'il couvrait se fait désormais ailleurs. Ne recopiez pas un scénario tel quel sans vérifier qu'il reste correct : la validation d'un titre ou d'une description, par exemple, peut désormais avoir lieu à un autre endroit qu'avant.
-
-Pour chaque UC nouvelle (points 1, 5, 6 et 7) : donnez-lui un numéro à la suite des UC existantes, puis listez ses scénarios de tests — pour chacun, un nom de méthode et une description d'une ligne (préconditions, action, résultat attendu), sur le modèle des exemples ci-dessous.
-
-Les trois UC ci-dessous (UC1 à UC3) sont reprises telles qu'elles existaient avant cette évolution, à titre d'exemple de format — elles ne sont pas nécessairement encore correctes telles quelles, à vous de vérifier :
+Voici les trois premières UC telles qu'elles existaient avant cette évolution — elles montrent le format attendu, mais ne sont pas nécessairement encore correctes :
 
 1. **(UC1) Ajouter une tâche à la liste :**
    1. `addTask` : la tâche est contenue dans la liste, on informe du succès de l'opération
@@ -100,11 +94,21 @@ Les trois UC ci-dessous (UC1 à UC3) sont reprises telles qu'elles existaient av
    1. `removeTask` : la tâche n'est plus contenue dans la liste, on informe du succès de l'opération
    2. `removeUnexistingTask` : on tente de supprimer une tâche inexistante, on informe de l'échec de l'opération
 
-Complétez cette liste : corrigez UC1 à UC3 si besoin, ajoutez l'UC « terminer une tâche » (question 3) et l'UC « modifier le titre » (évolution de l'UC « renommer une tâche » de la question 2) en les adaptant aux nouvelles règles, puis ajoutez les UC entièrement nouvelles restantes (créer une tâche, modifier la description, retrouver une tâche, modifier une tâche via la TodoList). Vous devriez obtenir 9 UC au total (UC1 à UC9).
+Mettez à jour la spécification des UC existantes : corrigez UC1 à UC3, puis ajoutez l'UC4 « modifier le titre d'une tâche » (évolution de la question 2) et l'UC5 « terminer une tâche » (question 3), en les adaptant aux nouvelles règles. Reprenez chaque scénario existant un par un : il peut rester inchangé, être renommé, voir son comportement attendu modifié, ou devenir obsolète si la vérification qu'il couvrait se fait désormais ailleurs — la validation d'un titre, par exemple, n'a plus forcément lieu dans la `TodoList`.
+
+### 🤖 À partir d'ici, travaillez avec l'IA
+
+À partir de la question 6, aidez-vous d'un assistant IA (Claude Code, Copilot, …). Pour le TDD (questions 7 et 8), respectez scrupuleusement le cycle red-green-refactor étape par étape — demandez d'abord le test seul, vérifiez qu'il échoue pour de bonnes raisons, puis demandez le code minimal, vérifiez qu'il passe, puis le refactor si besoin.
+
+### Spécifier les UC nouvelles
+
+**Question 6** :
+
+Spécifiez les UC nouvelles (points 1, 5, 6 et 7 de la question 5), numérotées UC6 à UC9, dans le même format. Donnez à l'assistant IA ces quatre points et votre spécification de la question 5 comme exemple de format, et demandez-lui la liste des scénarios de tests. Relisez ensuite chaque scénario proposé en le confrontant à l'énoncé — en particulier ce que l'énoncé dit des valeurs vides et nulles, des tâches terminées et des tâches absentes de la liste —, et vérifiez qu'aucune règle n'est restée sans scénario. Corrigez la liste obtenue, en marquant d'une courte note chaque scénario que vous avez dû corriger, ajouter ou supprimer.
 
 ### Compter les tâches
 
-**Question 6** *(UC10)* :
+**Question 7** *(UC10)* :
 
 Implémentez `countTasks`, qui renvoie le nombre de tâches de la `TodoList`. Faites du TDD pour ces scénarios :
 
@@ -114,7 +118,7 @@ Implémentez `countTasks`, qui renvoie le nombre de tâches de la `TodoList`. Fa
 
 ### Vider la liste
 
-**Question 7** *(UC11)* :
+**Question 8** *(UC11)* :
 
 Implémentez `clearTasks`, qui vide la `TodoList`. Faites du TDD pour ces scénarios :
 

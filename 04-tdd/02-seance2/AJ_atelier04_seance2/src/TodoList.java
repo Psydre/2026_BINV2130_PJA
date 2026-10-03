@@ -109,7 +109,7 @@ public class TodoList {
         return completedTasks.contains(task);
     }
 
-    // Question 6
+    // Question 7
 
     /**
      * @return le nombre de tâches contenues dans la liste
@@ -118,7 +118,7 @@ public class TodoList {
         return tasks.size();
     }
 
-    // Question 7
+    // Question 8
 
     /**
      * Vide la liste de toutes ses tâches.
