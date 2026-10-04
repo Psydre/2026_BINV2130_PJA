@@ -63,7 +63,7 @@ Une fois vos scénarios écrits et vos tests au vert, demandez à un assistant I
 
 Pour l'argument `newTask` de `renameTask` (question 2), partitionnez les valeurs possibles en classes d'équivalence (par exemple : nom vide/blanc, nom valide et déjà présent dans la liste, nom valide et absent de la liste). Pour chaque classe, indiquez quel scénario de test de la question 2 la couvre déjà.
 
-Faites de même pour l'argument `existingTask` de `removeTask` (question 1) : identifiez les classes d'équivalence de son domaine de valeurs, puis vérifiez qu'un scénario de test existe déjà pour chacune. S'il en manque un, ajoutez-le en TDD.
+Faites de même pour l'argument de `removeTask` (question 1) : identifiez les classes d'équivalence de son domaine de valeurs, puis vérifiez qu'un scénario de test existe déjà pour chacune. S'il en manque un, ajoutez-le en TDD.
 
 ### Spécifier les tests
 
@@ -74,7 +74,7 @@ Dans cet exercice et le suivant, vous n'écrivez pas de code : vous complétez u
 Nous souhaitons faire évoluer l'application de gestion de tâches. Il doit être possible :
 
 1. De créer des tâches en donnant ces informations : un titre (ne peut pas être vide ou null), une description (ne peut pas être nulle). *(UC nouvelle)*
-2. D'ajouter une tâche qui a un même titre au sein d'une TodoList. Cela revient à ajouter une tâche déjà présente, on informe de l'échec de l'opération. *(fait évoluer l'UC1 « Ajouter une tâche à la liste » ci-dessous)*
+2. De refuser d'ajouter une tâche qui a le même titre et la même description qu'une tâche de la TodoList. Cela revient à ajouter une tâche déjà présente, on informe de l'échec de l'opération. *(fait évoluer l'UC1 « Ajouter une tâche à la liste » ci-dessous)*
 3. De terminer une tâche. *(fait évoluer l'UC identifiée à la question 3)*
 4. De modifier le titre d'une tâche seulement si cette tâche n'est pas déjà terminée ; notons que le titre ne peut pas être vide ou nul… *(fait évoluer l'UC « renommer une tâche » identifiée à la question 2)*
 5. De modifier la description d'une tâche seulement si cette tâche n'est pas déjà terminée ; notons que la description peut être vide. *(UC nouvelle, à rapprocher du point précédent)*
